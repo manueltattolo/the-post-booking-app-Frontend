@@ -1,5 +1,5 @@
 import { Tabs } from 'antd';
-import BookingCard from '../modules/BookingCard';
+import BookingCard from '../components/BookingCard';
 
 const { TabPane } = Tabs;
 
