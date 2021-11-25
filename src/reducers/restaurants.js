@@ -16,7 +16,7 @@ export const restaurantSlice = createSlice({
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(fetchRestaurants.fulfilled, (state, action) => {
 
-       state.restaurants=action.payload;
+      // state.restaurants=action.payload;
    
       //state.restaurants.push(action.payload)
     }).addCase(fetchRestaurants.rejected, (state, action) => {

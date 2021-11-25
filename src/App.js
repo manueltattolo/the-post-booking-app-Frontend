@@ -1,9 +1,9 @@
-import  BookingPage  from './pages/BookingPage';
+import BookingPage from './pages/BookingPage';
 
 function App() {
   return (
     <div className="App">
-        <BookingPage></BookingPage>
+        <BookingPage/>
     </div>
   );
 }
