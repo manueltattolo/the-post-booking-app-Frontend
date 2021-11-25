@@ -14,7 +14,7 @@ function BookingPage() {
   useEffect(() => {
     dispatch(fetchRestaurants()); // I am sending the action // like button
   }, []);
-  
+
   return (
     <div>
       <h1>Book your table</h1>
