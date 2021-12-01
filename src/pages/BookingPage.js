@@ -8,6 +8,7 @@ const { TabPane } = Tabs;
 
 function BookingPage() {
   const dispatch = useDispatch();
+  
   const restaurants = useSelector((state) => state.restaurants);
   console.log(restaurants);
 

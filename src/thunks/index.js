@@ -1,6 +1,7 @@
 // First, create the thunk
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "../interceptors"
+
 export const fetchRestaurants = createAsyncThunk(
     'restaurant/fetchRestaurants',
     async () => {
