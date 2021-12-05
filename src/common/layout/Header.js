@@ -14,14 +14,14 @@ const Header = () => {
   const restaurant = restaurants.find(
     (restaurant) => restaurant.restName === "Villa Italia"
   );
-
+  
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>{restaurant?.restName}</h1>
         <h2>{restaurant?.address}</h2>
       </header>
-      <div className={classes['main-image']}>
+      <div className={classes["main-image"]}>
         <img src={restaurant?.picture} alt="The restaurant pic" />
       </div>
     </Fragment>

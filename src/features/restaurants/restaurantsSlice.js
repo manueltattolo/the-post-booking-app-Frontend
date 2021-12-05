@@ -6,7 +6,9 @@ export const getRestaurants = createAsyncThunk(
     try {
     return await fetch("http://localhost:8016/api/v1/restaurants").then((res) =>
       res.json()
-    ); } catch (error) {}
+    ); } catch (error) {
+      console.log(error);
+    }
   }
 );
 

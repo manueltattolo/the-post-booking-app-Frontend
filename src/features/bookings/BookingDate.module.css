@@ -1,0 +1,53 @@
+.bookdate {
+  padding: 0.5rem;
+}
+
+.title {
+  height: 3rem;
+  width: 80%;
+  margin: auto;
+  margin-top: -1rem;
+  position: relative;
+  border-bottom: 1px solid #081f258c;
+}
+
+.title h3 {
+  font-size: 32px;
+}
+
+.wrapper {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 100px 150px 110px;
+  grid-gap: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.box {
+  border-bottom: 0.1px solid #081f258c;
+}
+
+.box label {
+}
+
+.butt {
+  padding: 1.5rem;
+}
+
+.butt button {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fc2904;
+  border: 1px solid #a01902;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.butt button:hover,
+.butt button:active {
+  background-color: #641e03;
+  border-color: #641e03;
+}
