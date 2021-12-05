@@ -2,9 +2,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getServices = createAsyncThunk(
     "services/getServices",
-    async (dispatch, getState) => {
+    async (dispatch, offsettimeValue) => {
       try {
-      return await fetch("http://localhost:8016/api/v1/services/{date}").then((res) =>
+      return await fetch(`http://localhost:8016/api/v1/services/${offsettimeValue}`).then((res) =>
         res.json()
       ); } catch (error) {}
     }
