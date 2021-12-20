@@ -4,7 +4,7 @@ export const getRestaurants = createAsyncThunk(
   "restaurants/getRestaurants",
   async (dispatch, getState) => {
     try {
-    return await fetch("http://localhost:8016/api/v1/restaurants").then((res) =>
+    return await fetch("http://localhost:8066/api/v1/restaurants").then((res) =>
       res.json()
     ); } catch (error) {
       console.log(error);

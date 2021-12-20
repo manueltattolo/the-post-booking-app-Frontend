@@ -2,9 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getServices = createAsyncThunk(
     "services/getServices",
-    async (dispatch, offsettimeValue) => {
+    async (offsettimeValue) => {
+      //debugger
       try {
-      return await fetch(`http://localhost:8016/api/v1/services/${offsettimeValue}`).then((res) =>
+      return await fetch(`http://localhost:8066/api/v1/services/${offsettimeValue}`).then((res) =>
         res.json()
       ); } catch (error) {}
     }
@@ -13,7 +14,7 @@ export const getServices = createAsyncThunk(
   const servicesSlice = createSlice({
     name: "service",
     initialState: {
-      bookings: [],
+      services: [],
       status: null,
     },
     extraReducers: {
@@ -22,7 +23,7 @@ export const getServices = createAsyncThunk(
       },
       [getServices.fulfilled]: (state, action) => {
         state.status = "success";
-        state.bookings = action.payload;
+        state.services = action.payload;
       },
       [getServices.rejected]: (state, action) => {
         state.status = "failed";

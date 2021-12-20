@@ -1,20 +1,21 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useMemo, Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getRestaurants } from "../../features/restaurants/restaurantsSlice";
 import classes from "./Header.module.css";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const { restaurants } = useSelector((state) => state.restaurants);
+  const { restaurants = [] } = useSelector((state) => state.restaurants);
 
   useEffect(() => {
     dispatch(getRestaurants());
   }, [dispatch]);
 
-  const restaurant = restaurants.find(
-    (restaurant) => restaurant.restName === "Villa Italia"
+  const restaurant = useMemo(
+    () => (restaurants).find(restaurant => restaurant.restName === 'VILLA ITALIA')
+    , [restaurants]
   );
-  
+  console.log('restaurant', restaurant, restaurants)
   return (
     <Fragment>
       <header className={classes.header}>
